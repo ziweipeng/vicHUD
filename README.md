@@ -5,32 +5,23 @@ This is a base README file for the project. Overall plan for the vicHUD:
 
 ## Introduction
 
-\paragraph {
-
 The purpose of this project is to produce a Heads-Up Display (HUD) to accurately, safely, fashionably, and rapidly display useful information to a driver about their vehicle and their current trip. Vehicle manufacturers today already have implimented HUDs as part of their "cockpit" experiences, believing that drivers can check important information such as speed and direction without taking their eyes off of the road. Recent HUD units display everything from GPS guidance to augmented reality assisted lane switching. While not all of these features will be initially realistic for this project, it should still make the basics of a vehicle HUD available to those without newer expensive cars. Advanced users should also be able to customize their interface or even build their own features as they see fit. Eventually, we hope that the project will attract open source developers interested in expanding vehicle compatibility, or frankly, whatever they want.
-
-}
 
 ## Features
 
-\paragraph {
-
 As of March 2020, the HUD will support:
 
-\_ Vehicle Speed
-\_ Vehicle Direction
-\_ Vehicle RPM
-\_ Current Time and Date
-\_ Blind Spot Detection
-\_ Read/Front Parking Camera
-\_ Entertainment System Integration
+..*
 
-}
-
+- Vehicle Speed
+- Vehicle Direction
+- Vehicle RPM
+- Current Time and Date
+- Blind Spot Detection
+- Read/Front Parking Camera
+- Entertainment System Integration
 
 ## Data Flow Concept
-
-\paragraph {
 
 In 1996, the US standardized steering wheel-side OBD-II ports for the convenience of auto repair shops and manufacturers. While this aided the vehicle diagnosis process, vehicle manufacturers did not agree on a standard pin configuration until the US passed another law in 2002. After 2002, all US vehicles (and most vehicles around the world) now support the CAN Bus configuration. 
 
@@ -77,8 +68,6 @@ The response, then, could be:
 Repeat this request several times a second for several PIDs to simulate the "real-time" vehicle speed, RPM, etc.
 
 This overall process is something we can automate in a microprocessor, such as an Arduino UNO connected to an ELM327 chipset. The microprocessor can package this data in some data structure and display it directly to a GUI on an Arduino Shield. Alternatively, the Arduino can pass the decoded and neatly formatted data wirelessly to another device. In this case, we would use an Android phone. The advantage here is that the Android phone has the documentation support for and easy access to an advanced suite of sensors and online information. Here, we would build the GUI in the form of an application that would integrate the Arduino's telemetry stream, the phone's GPS/Acceletrometer/Gyroscope, and anything else desired. To actually display the information to the user, the phone will need to attach to a mount located somewhere in front of the dashboard. A contraption that holds special glass will create a reflect the phone screen and focus the text at infinity. This ensures the user focuses their vision down the road without any of the graphics causing a distraction.
-
-}
 
 ## FOR VEHICLE TELEMETRY
 VEHICLE --> 
