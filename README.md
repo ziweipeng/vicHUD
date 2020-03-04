@@ -11,8 +11,6 @@ The purpose of this project is to produce a Heads-Up Display (HUD) to accurately
 
 As of March 2020, the HUD will support:
 
-..*
-
 - Vehicle Speed
 - Vehicle Direction
 - Vehicle RPM
